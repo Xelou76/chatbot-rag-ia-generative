@@ -1,0 +1,63 @@
+### Qui a développé Stable Diffusion ?
+  reformulations : Qui est à l’origine du développement de Stable Diffusion ? | Quelle organisation a créé Stable Diffusion ? | Par qui Stable Diffusion a-t-il été développé ?
+  [simple] 2.0 s · contexte contient la réponse : True · réponse correcte : False
+    pages : Stable Diffusion, Stable Diffusion, Stable Diffusion, Stable Diffusion
+    réponse : Le contexte ne précise pas qui a développé Stable Diffusion.
+  [multi-query + RRF] 3.7 s · contexte contient la réponse : True · réponse correcte : False
+    pages : Stable Diffusion, Stable Diffusion, Stable Diffusion, Stable Diffusion
+    réponse : Le contexte ne précise pas qui a développé Stable Diffusion.
+
+### En quelle année ChatGPT a-t-il été lancé ?
+  reformulations : Quand ChatGPT a-t-il été lancé ? | En quelle année ChatGPT a-t-il été mis à la disposition du public ? | À quelle date ChatGPT a-t-il été lancé ?
+  [simple] 2.0 s · contexte contient la réponse : True · réponse correcte : True
+    pages : ChatGPT, ChatGPT, ChatGPT, ChatGPT
+    réponse : ChatGPT a été lancé en novembre 2022.
+  [multi-query + RRF] 3.6 s · contexte contient la réponse : True · réponse correcte : True
+    pages : ChatGPT, ChatGPT, ChatGPT, ChatGPT
+    réponse : ChatGPT a été lancé en 2022.
+
+### Qui a inventé les réseaux antagonistes génératifs ?
+  reformulations : Qui est à l’origine des réseaux antagonistes génératifs ? | Quel chercheur a inventé les GAN ? | À qui attribue-t-on la création des réseaux antagonistes génératifs ?
+  [simple] 1.7 s · contexte contient la réponse : True · réponse correcte : True
+    pages : Réseaux antagonistes génératifs, Intelligence artificielle générative, Intelligence artificielle générative, Réseaux antagonistes génératifs
+    réponse : Les réseaux antagonistes génératifs ont été introduits par Ian Goodfellow et ses collègues en 2014.
+  [multi-query + RRF] 3.4 s · contexte contient la réponse : True · réponse correcte : True
+    pages : Réseaux antagonistes génératifs, Intelligence artificielle générative, Intelligence artificielle générative, Réseaux antagonistes génératifs
+    réponse : Les réseaux antagonistes génératifs ont été introduits par Ian Goodfellow et ses coauteurs en 2014.
+
+### Qui a fondé Midjourney ?
+  reformulations : Qui est le fondateur de Midjourney ? | Par qui Midjourney a-t-il été créé ? | Quelle personne a fondé l’entreprise Midjourney ?
+  [simple] 1.5 s · contexte contient la réponse : True · réponse correcte : True
+    pages : Midjourney, Midjourney, Midjourney, Midjourney
+    réponse : Midjourney a été fondée par David Holz, cofondateur de Leap Motion.
+  [multi-query + RRF] 3.7 s · contexte contient la réponse : True · réponse correcte : True
+    pages : Midjourney, Midjourney, Midjourney, Midjourney
+    réponse : Midjourney a été fondée par David Holz, cofondateur de Leap Motion.
+
+### Quelle entreprise développe Gemini ?
+  reformulations : Quelle entreprise est responsable du développement de Gemini ? | Quelle société a créé Gemini ? | Qui développe l’IA Gemini ?
+  [simple] 1.6 s · contexte contient la réponse : True · réponse correcte : True
+    pages : Google Gemini, Google Gemini, Google Gemini, Google Gemini
+    réponse : Gemini est développé par Google.
+  [multi-query + RRF] 3.4 s · contexte contient la réponse : True · réponse correcte : True
+    pages : Google Gemini, Google Gemini, Google Gemini, Google Gemini
+    réponse : Gemini est développé par Google.
+
+### Qui a créé LLaMA ?
+  reformulations : Quelle organisation a développé LLaMA ? | Qui est à l’origine de la création de LLaMA ? | Par qui le modèle LLaMA a-t-il été conçu ?
+  [simple] 1.9 s · contexte contient la réponse : True · réponse correcte : True
+    pages : LLaMA, LLaMA, LLaMA, Intelligence artificielle générative
+    réponse : LLaMA a été développé par Meta.
+  [multi-query + RRF] 12.2 s · contexte contient la réponse : True · réponse correcte : True
+    pages : LLaMA, LLaMA, LLaMA, Intelligence artificielle générative
+    réponse : LLaMA a été développé par Meta.
+
+### Comment fonctionne l'entraînement adversarial ?
+  reformulations : Quel est le principe de l’entraînement adversarial ? | Comment se déroule l’apprentissage adversarial ? | De quelle manière fonctionne l’entraînement par adversaires ?
+  [simple] 2.9 s · contexte contient la réponse : True · réponse correcte : True
+    pages : Réseaux antagonistes génératifs, Grand modèle de langage, Apprentissage par renforcement, Apprentissage par renforcement
+    réponse : Dans un GAN, deux réseaux s’entraînent en compétition : le **générateur** produit des échantillons, tandis que le **discriminateur** tente de distinguer les vrais échantillons de ceux générés. Le générateur ajuste ses productions pour tromper le discriminateur. Cet apprentissage peut être vu comme u
+  [multi-query + RRF] 4.5 s · contexte contient la réponse : True · réponse correcte : True
+    pages : Réseaux antagonistes génératifs, Apprentissage par renforcement, Grand modèle de langage, Grand modèle de langage
+    réponse : Dans un GAN, deux réseaux s’entraînent en compétition : le générateur crée des échantillons, tandis que le discriminateur tente de distinguer les échantillons réels de ceux générés. Le générateur apprend à tromper le discriminateur, et le discriminateur à mieux les repérer. Cet apprentissage peut êt
+

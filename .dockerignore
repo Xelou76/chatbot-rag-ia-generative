@@ -1,0 +1,13 @@
+# Ne jamais copier les secrets dans l'image (une image peut être publiée sur un registre)
+.env
+.streamlit/secrets.toml
+
+# Inutile ou propre à la machine : alourdit l'image et le contexte de build
+.venv/
+venv/
+__pycache__/
+*.pyc
+chroma_db_*/
+.git/
+resultats/
+*.pdf

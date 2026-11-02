@@ -1,0 +1,6 @@
+Qui a développé Stable Diffusion ? : 805 tokens en entrée, 17 tokens en sortie
+Quelle est la différence entre un GAN et un modèle de diffusion ? : 883 tokens en entrée, 68 tokens en sortie
+En quelle année ChatGPT a-t-il été lancé ? : 707 tokens en entrée, 10 tokens en sortie
+Quelle est la capitale de l'Australie ? : 707 tokens en entrée, 15 tokens en sortie
+Moyenne : 776 tokens en entrée, 28 en sortie, modèle gpt-6-luna
+Indexation : 425 chunks, 74801 tokens envoyés à text-embedding-3-small

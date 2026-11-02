@@ -1,0 +1,22 @@
+# Secrets : clés API (ne jamais les publier)
+.env
+.streamlit/secrets.toml
+
+# Bases vectorielles : régénérables à partir des pages Wikipedia, volumineuses et binaires
+chroma_db_*/
+
+# Environnement virtuel : propre à chaque machine, recréé avec pip install -r requirements.txt
+.venv/
+venv/
+
+# Cache de bytecode Python : généré automatiquement à l'exécution
+__pycache__/
+*.pyc
+
+# Divers
+.DS_Store
+.idea/
+.vscode/
+
+# Énoncé du cours : document de l'enseignant, à ne pas republier
+enonce_TP_RAG.pdf

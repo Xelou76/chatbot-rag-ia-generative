@@ -1,0 +1,8 @@
+question | rang BM25 | rang embeddings (1 = premier, >20 = absent du top 20)
+Quel logiciel d'OpenAI dessine à partir d'une phrase ? | >20 | 5
+Who invented generative adversarial networks? | 1 | 5
+Que fait Emad Mostaque ? | 1 | >20
+Que dit William Orrick ? | 1 | 5
+Qui est Greg Brockman ? | 1 | 4
+Que permet la licence CreativeML OpenRAIL-M ? | 1 | 1
+Qu'est-ce que SDXL-Turbo ? | 1 | 1

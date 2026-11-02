@@ -1,0 +1,25 @@
+Q6 12 documents
+   Intelligence artificielle générative 53701 https://fr.wikipedia.org/wiki/Intelligence_artificielle_générative
+   Transformeur génératif préentraîné 3810 https://fr.wikipedia.org/wiki/Transformeur_génératif_préentraîné
+   Google Gemini 25812 https://fr.wikipedia.org/wiki/Google_Gemini
+   Grand modèle de langage 33642 https://fr.wikipedia.org/wiki/Grand_modèle_de_langage
+   ChatGPT 55309 https://fr.wikipedia.org/wiki/ChatGPT
+   LLaMA 5247 https://fr.wikipedia.org/wiki/LLaMA
+   Réseaux antagonistes génératifs 12321 https://fr.wikipedia.org/wiki/Réseaux_antagonistes_génératifs
+   Apprentissage auto-supervisé 18263 https://fr.wikipedia.org/wiki/Apprentissage_auto-supervisé
+   Apprentissage par renforcement 40873 https://fr.wikipedia.org/wiki/Apprentissage_par_renforcement
+   DALL-E 9880 https://fr.wikipedia.org/wiki/DALL-E
+   Midjourney 8644 https://fr.wikipedia.org/wiki/Midjourney
+   Stable Diffusion 7018 https://fr.wikipedia.org/wiki/Stable_Diffusion
+Q7 chunks: 425 | exemple metadata: {'title': 'Intelligence artificielle générative', 'source': 'https://fr.wikipedia.org/wiki/Intelligence_artificielle_générative', 'start_index': 3516}
+total caractères: 274520
+Q9 dimension: 1536
+12 pages, 425 chunks : calcul des embeddings...
+Base créée dans chroma_db_openai (425 chunks)
+Q11 indexation 253.1 s
+  [ LLaMA ] LLaMA (Large Language Model Meta AI) est une famille de grands modèles de langage développé par Meta et rendu publiquement accessible. Deux autres versions du modèle plus spécifiques, optimisées à par
+  [ LLaMA ] LLaMA se présente comme un modèle ouvert, mais ni le code d'entrainement ni les données d'entrainement ne le sont, ce qui fait préférer le terme de « poids ouverts ». Le dépôt contient le code source 
+  [ LLaMA ] Tout comme tous les autres grands modèles linguistiques actuels (août 2024), il nécessite que ces paramètres (poids) soient stockés dans la mémoire vive, pour s'exécuter à une vitesse raisonnable, ce 
+  [ Intelligence artificielle générative ] De plus, les données francophones utilisées pour entraîner les LLM ne comptent que pour 0,2 % du total. Face à ce taux qui est source de biais culturels anglo-saxons dans l'IA et d'appauvrissement lan
+Base rechargée depuis chroma_db_openai (425 chunks)
+Q12 rechargement 0.0 s

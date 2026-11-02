@@ -1,0 +1,24 @@
+### Qui a créé LLaMA ?
+  similarité pages : LLaMA (0), LLaMA (3542), LLaMA (4289), Intelligence artificielle générative (49830)
+  MMR        pages : LLaMA (0), LLaMA (3542), Intelligence artificielle générative (49830), Stable Diffusion (471)
+  réponse similarité : LLaMA a été développé par Meta.
+  réponse MMR        : LLaMA a été développé par Meta.
+
+### Qu'est-ce qu'un GAN ?
+  similarité pages : Réseaux antagonistes génératifs (8056), Réseaux antagonistes génératifs (1719), Réseaux antagonistes génératifs (0), Réseaux antagonistes génératifs (10720)
+  MMR        pages : Réseaux antagonistes génératifs (8056), Réseaux antagonistes génératifs (1719), Apprentissage par renforcement (9551), ChatGPT (16645)
+  réponse similarité : Un GAN (réseau antagoniste génératif) est un modèle composé de deux réseaux de neurones en compétition : le générateur crée des échantillons, comme des images, et le discriminateur tente de déterminer s’ils sont réels ou générés. Le générateur apprend ainsi à tromper le discriminateur.
+  réponse MMR        : Un GAN (réseau antagoniste génératif) est un modèle fondé sur un jeu entre deux éléments : un générateur, qui produit des données fictives, et un discriminateur. Les GAN peuvent notamment servir à générer des images.
+
+### Quels sont les risques de l'IA générative ?
+  similarité pages : Intelligence artificielle générative (1730), Intelligence artificielle générative (1194), Intelligence artificielle générative (20812), Intelligence artificielle générative (0)
+  MMR        pages : Intelligence artificielle générative (1730), Intelligence artificielle générative (1194), Intelligence artificielle générative (14477), Intelligence artificielle générative (19726)
+  réponse similarité : Les principaux risques évoqués sont :  - la création de fausses nouvelles, de deepfakes et de contenus visant à manipuler la population ; - des usages abusifs, accidentels ou détournés, notamment à des fins militaires ; - la suppression d’emplois et des effets complexes sur le travail et les compéte
+  réponse MMR        : Les risques évoqués dans le contexte comprennent :  - la création de fausses nouvelles, de deepfakes et la manipulation de la population ; - des usages abusifs, accidentels ou détournés, notamment à des fins militaires ; - une possible suppression massive d’emplois ; - des difficultés à vérifier la 
+
+### Qui a développé Stable Diffusion ?
+  similarité pages : Stable Diffusion (0), Stable Diffusion (2772), Stable Diffusion (3466), Stable Diffusion (5908)
+  MMR        pages : Stable Diffusion (0), Stable Diffusion (2772), Réseaux antagonistes génératifs (952), Intelligence artificielle générative (6001)
+  réponse similarité : Le contexte fourni ne précise pas qui a développé Stable Diffusion.
+  réponse MMR        : Je ne sais pas. Le contexte indique que Stable Diffusion est un modèle d’apprentissage automatique, mais ne précise pas qui l’a développé.
+

@@ -1,0 +1,13 @@
+chunk_size | k | contexte contient la réponse | réponse correcte | tokens de contexte (moyenne) | temps (s)
+(index chunk_size=300, overlap=60 prêt en 52 s)
+300 | 2 | 5/5 | 4/5 | 128 | 3.2
+300 | 4 | 5/5 | 5/5 | 254 | 1.6
+300 | 8 | 5/5 | 5/5 | 503 | 1.4
+(index chunk_size=1000, overlap=200 prêt en 0 s)
+1000 | 2 | 5/5 | 5/5 | 325 | 2.1
+1000 | 4 | 5/5 | 4/5 | 689 | 1.7
+1000 | 8 | 5/5 | 5/5 | 1402 | 2.2
+(index chunk_size=2000, overlap=400 prêt en 42 s)
+2000 | 2 | 5/5 | 4/5 | 687 | 1.9
+2000 | 4 | 5/5 | 5/5 | 1408 | 2.0
+2000 | 8 | 5/5 | 5/5 | 2872 | 2.1

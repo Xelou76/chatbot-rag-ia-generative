@@ -1,0 +1,9 @@
+### prompt complet
+Je ne sais pas.
+
+### sans « uniquement à partir du contexte »
+Je ne sais pas.
+
+### sans aucune des deux consignes
+La capitale de l’Australie est Canberra.
+

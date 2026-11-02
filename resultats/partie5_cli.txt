@@ -1,0 +1,28 @@
+Fournisseur : openai (chat : gpt-6-luna, embeddings : text-embedding-3-small)
+Building retriever...
+Base rechargée depuis C:\Users\gABRIEL\Documents\ING5\IA_generative\TP_RAG_Mineur\chroma_db_openai (425 chunks)
+--------------------------------------------------
+Posez une question :
+> 
+ChatGPT a été lancé en 2022.
+
+Sources :
+  - https://fr.wikipedia.org/wiki/ChatGPT
+
+
+--------------------------------------------------
+Posez une question :
+> 
+Un **GAN** repose sur deux réseaux entraînés en compétition : le générateur crée des échantillons et le discriminateur tente de distinguer les vrais des faux.
+
+Un **modèle de diffusion** génère une image en la débruitant progressivement pour faire apparaître le motif demandé, même s’il est absent de l’image de départ.
+
+Sources :
+  - https://fr.wikipedia.org/wiki/Intelligence_artificielle_générative
+  - https://fr.wikipedia.org/wiki/Réseaux_antagonistes_génératifs
+
+
+--------------------------------------------------
+Posez une question :
+> 
+Exiting...

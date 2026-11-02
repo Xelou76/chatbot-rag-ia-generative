@@ -1,0 +1,11 @@
+### Qu'est-ce que LLaMA ?
+LLaMA (« Large Language Model Meta AI ») est une famille de grands modèles de langage développée par Meta et rendue publiquement accessible. Meta a aussi publié des versions spécialisées, comme Llama Chat et Code Llama.
+
+### Et qui l'a créé ? (sans mémoire)
+Le contexte ne précise pas qui l’a créé.
+    pages : ChatGPT, Stable Diffusion, DALL-E, ChatGPT
+
+Question reformulée : Qui a créé LLaMA ?
+### Et qui l'a créé ? (avec mémoire)
+LLaMA a été développé par Meta.
+    pages : LLaMA, LLaMA, LLaMA, Intelligence artificielle générative
