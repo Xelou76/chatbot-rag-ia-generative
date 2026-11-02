@@ -151,7 +151,7 @@ Dans les trois cas, le LLM a raisonné correctement sur ce qu'on lui a donné : 
 | `.venv/` | Environnement **propre à chaque machine** (chemins absolus, binaires compilés pour Windows ou Linux), très lourd ; il se recrée avec `pip install -r requirements.txt`. |
 | `__pycache__/` | Bytecode Python **généré automatiquement** à l'exécution, spécifique à la version de Python : aucune information utile. |
 
-**Questions 22 et 23.** Le dépôt local est initialisé et le premier commit est fait ; `git status` confirme que `.env` n'est pas suivi. Le `README.md` explique l'installation, la configuration de la clé, le lancement en ligne de commande, Streamlit et Docker, et le déploiement. *(La création du dépôt GitHub et le push restent à faire : voir la fin du document.)*
+**Questions 22 et 23.** Le dépôt local est initialisé et le premier commit est fait ; `git status` confirme que `.env` n'est pas suivi. Le `README.md` explique l'installation, la configuration de la clé, le lancement en ligne de commande, Streamlit et Docker, et le déploiement. Le dépôt public est en ligne : <https://github.com/Xelou76/chatbot-rag-ia-generative>, créé avec `gh repo create ... --public --source . --push`. On a vérifié sur GitHub qu'il ne contient ni `.env` ni l'énoncé, et l'historique ne contient aucune clé.
 
 ---
 
@@ -268,4 +268,6 @@ Méthode proposée, dans l'esprit de RAGAS :
 ## Livrables et étapes restantes
 
 - Code complet : `main.py`, `app.py`, `requirements.txt`, `.gitignore`, `README.md`, `Dockerfile`, `.dockerignore`, `experiences.py`.
-- Dépôt Git local initialisé avec un commit ; **à faire** : créer le dépôt GitHub et pousser (questions 22-23), puis déployer sur Streamlit Community Cloud avec la clé OpenAI et un mot de passe dans les secrets (questions 24-26).
+- Dépôt GitHub public : <https://github.com/Xelou76/chatbot-rag-ia-generative> (questions 22-23).
+- Image Docker construite et testée (question 28).
+- **À faire** : déployer sur Streamlit Community Cloud avec `OPENAI_API_KEY` et `APP_PASSWORD` dans les secrets, puis ajouter ici l'URL de l'application (questions 24-26).
