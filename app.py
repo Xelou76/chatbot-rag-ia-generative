@@ -22,7 +22,7 @@ from main import CHAT_MODEL, EMBEDDING_MODEL, PROVIDER, TOP_K, build_prompt, get
 
 st.set_page_config(page_title="Chatbot RAG — IA générative", page_icon="🤖")
 st.title("🤖 Chatbot RAG sur l'IA générative")
-st.caption(f"Réponses fondées sur 12 pages Wikipedia · {PROVIDER} ({CHAT_MODEL}, {EMBEDDING_MODEL})")
+st.caption(f"Réponses fondées sur 12 pages Wikipedia · {PROVIDER} ({CHAT_MODEL}, {EMBEDDING_MODEL}) · déployé depuis GitHub")
 
 # Question 27 — L'application publique consomme la clé API : si APP_PASSWORD est défini (secret ou
 # variable d'environnement), on le demande avant tout appel au fournisseur. Sans APP_PASSWORD, accès libre.
