@@ -157,11 +157,11 @@ Dans les trois cas, le LLM a raisonné correctement sur ce qu'on lui a donné : 
 
 ## Partie 8 — Déploiement
 
-**Questions 24 à 26.** Déploiement sur Streamlit Community Cloud avec la clé OpenAI dans les secrets (`OPENAI_API_KEY`). L'énoncé recommande une clé personnelle pour une application publique ; comme la clé utilisée est partagée, l'application est protégée par un mot de passe (`APP_PASSWORD`, voir la question 27). Le code est prêt :
+**Questions 24 à 26.** Application déployée : <https://chatbot-rag-ia-generative.streamlit.app>. Déploiement sur Streamlit Community Cloud depuis le dépôt GitHub (branche `main`, fichier `app.py`, Python 3.12), avec la clé OpenAI dans les secrets (`OPENAI_API_KEY`). L'énoncé recommande une clé personnelle pour une application publique ; comme la clé utilisée est partagée, l'application est protégée par un mot de passe (`APP_PASSWORD`, voir la question 27). Vérifié en ligne : la page affiche « openai (gpt-6-luna, text-embedding-3-small) », donc la clé est bien lue depuis les secrets, et un mauvais mot de passe affiche « Mot de passe incorrect. » sans aucun appel à l'API.
 
 **Question 25.** Au début d'`app.py`, avant `from main import ...`, les secrets `OPENAI_API_KEY`, `MISTRAL_API_KEY` et `LLM_PROVIDER` sont copiés de `st.secrets` vers `os.environ` s'ils existent. L'accès est entouré d'un `try / except`, car sans fichier `.streamlit/secrets.toml` (en local), `st.secrets` lève une exception. En local, l'application continue donc d'utiliser le `.env` (vérifié). La copie doit se faire **avant** l'import, car `main.py` choisit le fournisseur au moment de son import.
 
-**Question 26.** *(Comportement attendu, à vérifier une fois l'application déployée.)* Après un `git push`, Streamlit Community Cloud détecte le nouveau commit sur la branche `main` et redéploie automatiquement l'application, qui affiche la nouvelle phrase au bout de quelques secondes : le dépôt GitHub sert de source unique, ce qui fait du `git push` une mise en production (déploiement continu).
+**Question 26.** *(Observé.)* J'ai ajouté « · déployé depuis GitHub » à la phrase sous le titre d'`app.py`, puis j'ai fait `git commit` et `git push`. Moins d'une minute plus tard, sans aucune action sur Streamlit Cloud, l'application en ligne affichait la nouvelle phrase. Streamlit Community Cloud surveille la branche `main` du dépôt et redéploie à chaque nouveau commit : le dépôt GitHub sert de source unique, et un `git push` vaut mise en production (déploiement continu). Seule une modification de `requirements.txt` déclenche une réinstallation complète des dépendances, plus longue.
 
 ### Question 27 [CR] — Risques d'une application publique
 
@@ -270,4 +270,4 @@ Méthode proposée, dans l'esprit de RAGAS :
 - Code complet : `main.py`, `app.py`, `requirements.txt`, `.gitignore`, `README.md`, `Dockerfile`, `.dockerignore`, `experiences.py`.
 - Dépôt GitHub public : <https://github.com/Xelou76/chatbot-rag-ia-generative> (questions 22-23).
 - Image Docker construite et testée (question 28).
-- **À faire** : déployer sur Streamlit Community Cloud avec `OPENAI_API_KEY` et `APP_PASSWORD` dans les secrets, puis ajouter ici l'URL de l'application (questions 24-26).
+- Application déployée sur Streamlit Community Cloud : <https://chatbot-rag-ia-generative.streamlit.app>, protégée par mot de passe (questions 24-26).
