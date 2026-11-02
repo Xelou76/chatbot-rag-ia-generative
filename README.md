@@ -15,8 +15,8 @@ base vectorielle Chroma → recherche des 4 passages les plus proches → répon
 ## Installation
 
 ```bash
-git clone https://github.com/<votre-compte>/<votre-depot>.git
-cd <votre-depot>
+git clone https://github.com/Xelou76/chatbot-rag-ia-generative.git
+cd chatbot-rag-ia-generative
 python -m venv .venv
 source .venv/bin/activate          # Windows : .venv\Scripts\activate
 pip install -r requirements.txt
