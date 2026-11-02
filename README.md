@@ -57,15 +57,25 @@ de la question (RAG-Fusion), la mémoire conversationnelle et les citations `[1]
 
 ```bash
 docker build -t tp-rag .
-docker run -p 8501:8501 -e MISTRAL_API_KEY=... tp-rag
+docker run -p 8501:8501 --env-file .env -v tp-rag-chroma:/app/chroma_db_openai tp-rag
 ```
+
+La clé est lue dans `.env` au lancement : elle n'est jamais copiée dans l'image (le `.dockerignore` exclut `.env`).
+Le volume `tp-rag-chroma` conserve la base vectorielle : seul le premier lancement l'indexe.
 
 ## Déploiement sur Streamlit Community Cloud
 
 1. Sur <https://share.streamlit.io>, *Create app* → *Yup, I have an app* → ce dépôt, branche `main`, fichier `app.py`.
-2. Dans *Advanced settings* : Python 3.12, et le secret au format TOML : `MISTRAL_API_KEY = "votre-cle"`.
+2. Dans *Advanced settings* : Python 3.12, et les secrets au format TOML :
 
-`app.py` copie ce secret dans les variables d'environnement avant de charger `main.py`.
+   ```toml
+   OPENAI_API_KEY = "sk-..."
+   APP_PASSWORD = "un-mot-de-passe"   # facultatif, mais recommandé pour une application publique
+   ```
+
+`app.py` copie ces secrets dans les variables d'environnement avant de charger `main.py`. Si `APP_PASSWORD`
+est défini, l'application demande ce mot de passe avant toute question : sans lui, toute personne qui a le lien
+consomme les crédits de la clé. La base Chroma est reconstruite au premier démarrage (environ 4 minutes).
 
 ## Structure du projet
 

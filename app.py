@@ -3,6 +3,7 @@ TP : Chatbot RAG — interface web Streamlit (parties 6 et 8).
 Lancement : streamlit run app.py
 """
 
+import hmac
 import os
 
 import streamlit as st
@@ -10,7 +11,7 @@ import streamlit as st
 # Question 25 — En ligne, il n'y a pas de .env : les clés sont dans st.secrets. On les copie dans
 # os.environ AVANT d'importer main.py, qui choisit le fournisseur au moment de l'import.
 # En local, sans .streamlit/secrets.toml, l'accès à st.secrets lève une exception : on l'ignore.
-for key in ("OPENAI_API_KEY", "MISTRAL_API_KEY", "LLM_PROVIDER"):
+for key in ("OPENAI_API_KEY", "MISTRAL_API_KEY", "LLM_PROVIDER", "APP_PASSWORD"):
     try:
         if key in st.secrets and not os.environ.get(key):
             os.environ[key] = str(st.secrets[key])
@@ -22,6 +23,18 @@ from main import CHAT_MODEL, EMBEDDING_MODEL, PROVIDER, TOP_K, build_prompt, get
 st.set_page_config(page_title="Chatbot RAG — IA générative", page_icon="🤖")
 st.title("🤖 Chatbot RAG sur l'IA générative")
 st.caption(f"Réponses fondées sur 12 pages Wikipedia · {PROVIDER} ({CHAT_MODEL}, {EMBEDDING_MODEL})")
+
+# Question 27 — L'application publique consomme la clé API : si APP_PASSWORD est défini (secret ou
+# variable d'environnement), on le demande avant tout appel au fournisseur. Sans APP_PASSWORD, accès libre.
+APP_PASSWORD = os.environ.get("APP_PASSWORD")
+if APP_PASSWORD and not st.session_state.get("authenticated"):
+    password = st.text_input("Mot de passe", type="password")
+    if password and hmac.compare_digest(password.encode(), APP_PASSWORD.encode()):
+        st.session_state.authenticated = True
+        st.rerun()
+    if password:
+        st.error("Mot de passe incorrect.")
+    st.stop()
 
 
 @st.cache_resource(show_spinner="Construction de la base vectorielle (une seule fois)...")

@@ -157,7 +157,7 @@ Dans les trois cas, le LLM a raisonné correctement sur ce qu'on lui a donné : 
 
 ## Partie 8 — Déploiement
 
-**Questions 24 à 26.** À faire avec ton compte : déploiement sur Streamlit Community Cloud avec une **clé Mistral personnelle** dans les secrets, et non la clé OpenAI commune, comme le demande l'énoncé. Le code est prêt :
+**Questions 24 à 26.** Déploiement sur Streamlit Community Cloud avec la clé OpenAI dans les secrets (`OPENAI_API_KEY`). L'énoncé recommande une clé personnelle pour une application publique ; comme la clé utilisée est partagée, l'application est protégée par un mot de passe (`APP_PASSWORD`, voir la question 27). Le code est prêt :
 
 **Question 25.** Au début d'`app.py`, avant `from main import ...`, les secrets `OPENAI_API_KEY`, `MISTRAL_API_KEY` et `LLM_PROVIDER` sont copiés de `st.secrets` vers `os.environ` s'ils existent. L'accès est entouré d'un `try / except`, car sans fichier `.streamlit/secrets.toml` (en local), `st.secrets` lève une exception. En local, l'application continue donc d'utiliser le `.env` (vérifié). La copie doit se faire **avant** l'import, car `main.py` choisit le fournisseur au moment de son import.
 
@@ -170,13 +170,13 @@ Dans les trois cas, le LLM a raisonné correctement sur ce qu'on lui a donné : 
 
 **Mesures** :
 1. **Limiter le débit** : nombre maximal de questions par session ou par adresse IP, longueur maximale de la question, `max_tokens` sur la réponse.
-2. **Restreindre l'accès** : application privée sur Streamlit Cloud (liste d'invités) ou authentification (`st.login`, mot de passe).
-3. **Plafonner les dépenses** chez le fournisseur (budget mensuel, alertes), et utiliser une clé dédiée au déploiement, révocable, à quota limité (la clé Mistral gratuite).
+2. **Restreindre l'accès** : application privée sur Streamlit Cloud (liste d'invités) ou authentification (`st.login`, mot de passe). *Mis en place* : si le secret `APP_PASSWORD` est défini, `app.py` demande ce mot de passe (comparaison à temps constant avec `hmac.compare_digest`) et appelle `st.stop()` tant qu'il n'est pas correct, donc aucune requête n'atteint l'API.
+3. **Plafonner les dépenses** chez le fournisseur (budget mensuel, alertes), et utiliser une clé dédiée au déploiement, révocable, à quota limité (par exemple une clé Mistral gratuite).
 4. **Surveiller** l'usage (journaux, LangSmith) et mettre en cache les réponses aux questions fréquentes.
 
 ### Question 28 (bonus) — Docker
 
-Le `Dockerfile` part de `python:3.12-slim`, installe les dépendances (couche mise en cache tant que `requirements.txt` ne change pas), copie `main.py` et `app.py`, expose le port 8501 et lance `streamlit run app.py --server.address=0.0.0.0`. La clé est passée au lancement : `docker run -p 8501:8501 -e MISTRAL_API_KEY=... tp-rag`. *Docker n'étant pas installé sur ma machine, l'image n'a pas été construite.*
+Le `Dockerfile` part de `python:3.12-slim`, installe les dépendances (couche mise en cache tant que `requirements.txt` ne change pas), copie `main.py` et `app.py`, expose le port 8501 et lance `streamlit run app.py --server.address=0.0.0.0`. La clé est passée au lancement, sans jamais entrer dans l'image : `docker run -p 8501:8501 --env-file .env -v tp-rag-chroma:/app/chroma_db_openai tp-rag`. Le volume `tp-rag-chroma` conserve la base Chroma entre deux lancements : sans lui, le conteneur repart d'un système de fichiers vierge et réindexe les 12 pages (environ 4 minutes) à chaque démarrage.
 
 **Pourquoi un `.dockerignore` ?** `docker build` envoie tout le dossier au moteur Docker (le *contexte de build*). Sans `.dockerignore`, un `COPY . .` copierait le fichier **`.env` dans l'image** : la clé resterait dans une couche de l'image, lisible par toute personne qui la récupère (par exemple sur Docker Hub). On copierait aussi `.venv` (des centaines de Mo de binaires Windows, inutilisables sous Linux), les bases `chroma_db_*` et `.git`, ce qui alourdit l'image et ralentit le build.
 
@@ -266,4 +266,4 @@ Méthode proposée, dans l'esprit de RAGAS :
 ## Livrables et étapes restantes
 
 - Code complet : `main.py`, `app.py`, `requirements.txt`, `.gitignore`, `README.md`, `Dockerfile`, `.dockerignore`, `experiences.py`.
-- Dépôt Git local initialisé avec un commit ; **à faire** : créer le dépôt GitHub et pousser (questions 22-23), puis déployer sur Streamlit Community Cloud avec une clé Mistral personnelle (questions 24-26).
+- Dépôt Git local initialisé avec un commit ; **à faire** : créer le dépôt GitHub et pousser (questions 22-23), puis déployer sur Streamlit Community Cloud avec la clé OpenAI et un mot de passe dans les secrets (questions 24-26).
